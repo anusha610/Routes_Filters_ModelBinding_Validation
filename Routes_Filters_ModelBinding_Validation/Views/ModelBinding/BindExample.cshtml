@@ -1,0 +1,45 @@
+﻿@model Contact
+
+@{
+    ViewData["Title"] = "BindExample";
+}
+
+<h2>BindExample</h2>
+
+<h4>Contact</h4>
+<hr />
+<div class="row">
+    <div class="col-md-4">
+        <form asp-action="BindExample">
+            <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+            <div class="form-group">
+                <label asp-for="Firstname" class="control-label">Firstname</label>
+                <input asp-for="Firstname" class="form-control" />
+                <span asp-validation-for="Firstname" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Lastname" class="control-label">Lastname</label>
+                <input asp-for="Lastname" class="form-control" />
+                <span asp-validation-for="Lastname" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Contactnumber" class="control-label">Contactnumber</label>
+                <input asp-for="Contactnumber" class="form-control" />
+                <span asp-validation-for="Contactnumber" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <input type="submit" value="Create" class="btn btn-default" />
+            </div>
+        </form>
+    </div>
+</div>
+
+
+<div>
+    <a asp-action="Index">Back to List</a>
+</div>
+
+@section Scripts { 
+    @{await Html.RenderPartialAsync("_ValidationScriptsPartial");}
+
+}

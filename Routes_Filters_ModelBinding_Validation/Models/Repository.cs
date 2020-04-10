@@ -39,6 +39,7 @@ namespace Routes_Filters_ModelBinding_Validation.Models
         FirstName = "Mary",
         LastName = "Peters",
         Role = Role.Guest
+       
       }
     };
 
